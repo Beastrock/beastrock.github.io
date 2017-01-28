@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Quotes">
+        <meta name="author" content="Beastrock">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <title>Just a quote</title>
+
+        <script id="quotes_json" type="application/json">
+            [
+              {
+                "signature": "Неизвестный маркетолог",
+                "phrase": "Кукурузные хлопья - теперь без асбеста!"
+              },
+              {
+                "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
+              },
+              {
+                "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+              },
+              {
+                "signature": "Фаина Раневская",
+                "phrase": "Жизнь — это затяжной прыжок из п*зды в могилу."
+              },
+              {
+                "signature": "Фаина Раневская",
+                "phrase": "Четвертый раз смотрю этот фильм и должна вам сказать, что сегодня актеры играли как никогда."
+              },
+              {
+                "signature": "Фаина Раневская",
+                "phrase": "Под самым красивым хвостом павлина скрывается самая обычная куриная жопа. Так что меньше пафоса, господа."
+              },
+              {
+                "signature": "Фаина Раневская",
+                "phrase": "Хрен, положенный на мнение окружающих, обеспечивает спокойную и счастливую жизнь."
+              },
+              {
+                "signature": "Фаина Раневская",
+                "phrase": "Всю свою жизнь я проплавала в унитазе стилем баттерфляй."
+              },
+              {
+                "signature": "А. П. Чехов",
+                "phrase": "Университет развивает все способности, в том числе — глупость."
+              },
+              {
+                "signature": "А. П. Чехов",
+                "phrase": "Если человек не курит и не пьёт, поневоле задумаешься, уж не сволочь ли он?"
+              },
+              {
+                "signature": "М. Жванецкий",
+                "phrase": "Высшая степень смущения — два взгляда, встретившиеся в замочной скважине."
+              },
+              {
+                "signature": "М. Жванецкий",
+                "phrase": "Красиво жить не запретишь. Но помешать можно."
+              },
+              {
+                "signature": "М. Жванецкий",
+                "phrase": "Если ты споришь с идиотом, то, вероятно, то же самое делает и он."
+              },
+              {
+                "phrase": "Извините, опоздал. У меня были курсы по тайм-менеджменту."
+              },
+              {
+                "phrase": "Макроэкономику изучать надо. Вот у вас не будет денег и работы, зато будете знать, почему их нет. "
+              },
+              {
+                "phrase": "Нельзя постоянно винить себя за что-то. Обвините себя разок и спокойно живите дальше."
+              },
+              {
+                "phrase": "Бог смог сотворить мир всего за 6 дней только потому, что ему не надо решать проблемы совместимости с предыдущими версиями."
+              }
+            ]
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <script>
+
+            $(document).ready(function(){
+                var json_data = JSON.parse($("#quotes_json").text());
+                var random_element_number = Math.floor(Math.random()*json_data.length);
+                var max_width_for_gif_image = 90;
+                var random_width_position = Math.floor(Math.random()*max_width_for_gif_image);
+                $("#phrase_text").html(json_data[random_element_number].phrase);
+                $("#signature").html(json_data[random_element_number].signature);
+                $("#shaquille_gif_image").css({"left": random_width_position+"vw"});
+            });     
+
+        </script>
+
+        <!-- Custom CSS -->
+        <style>
+
+            .top_block {;
+                height: 24vh;
+                width: 100%;
+                background-color: brown;
+            }
+
+            .bottom_block {
+                position: fixed;
+                bottom: 0;
+                height: 24vh;
+                width: 100%;
+                background-color: brown;
+            }
+
+            .content_block {
+                margin: 0;
+                padding: 30px 80px;     
+                z-index: 10;
+            }
+            
+            #signature {
+                margin-top: 60px;
+                font-size:2vw;
+                float: right;
+                display: inline-block;
+                font-family: "Georgia", serif;
+            }
+            
+            #shaquille_gif_image {
+                position: fixed;
+                bottom: 24vh;
+                left: 25vw;
+                z-index: -10;
+            }
+
+            #phrase_text {
+                text-align: left;
+                font-family: "Times New Roman", Times, serif;
+                font-style: italic;
+                word-spacing: 2px;
+                font-size: 4vw;
+            }
+
+        </style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="top_block"></div>
+
+        <div  class="content_block">
+
+            <div class="quote_block">
+                <span id="phrase_text"></span>
+                <span id="signature"></span>
+            </div>
+
+            <div id="shaquille_gif_image">
+                <a href="index.html">
+                <img src="https://beastrock.github.io/20_mood/shaquille.gif" alt="get a new quote">
+                </a>
+            </div>    
+
+        </div>
+
+        <div class="bottom_block"></div>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
