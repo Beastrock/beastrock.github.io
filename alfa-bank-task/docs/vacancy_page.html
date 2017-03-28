@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Вакансии</title>
+        <link rel="stylesheet" href="../blueprint/components.css" />
+        <script src="../blueprint/components.js"></script>
+        <style>
+        /*Vacancy post*/
+        .vacancy-post {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        #vacancy-info {
+            position: absolute;
+        }
+        .company_logo {
+            position: absolute;
+            margin-right: 20px;
+        }
+        #user {
+            position: relative;
+            float: right;
+            top: -40px;
+            margin-right: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <a-page>
+            <a-user id='user' text="HR Альфа Банка"></a-user>
+            <a-header slot="header">Вакансии</a-header>
+            <a-app-title>               
+                <a-heading size="xl">Вакансии</a-heading>
+                <a-heading size="s">В этом разделе HR Альфа банка видит вакансии, в которых нуждаются предприниматели и начинает искать кандитата. Проблему поиска кандидата мы в данном макете не рассматриваем.</a-heading>
+            </a-app-title>
+            <a-app-content>
+                <a-plate id="vacancy-post" is-flat="true" has-closer="false">
+                    <img width="100px" class='company_logo' src='./logos/first_company_logo.jpg' style="right: 10px;">
+                    <a-heading style='display: inline-block;' size='s'>
+                        <span size='s'>Менеджер по привлечению клиентов</span><br>
+                        <span size='l'>Полная занятость</span><br>
+                        <span size='s'>ООО Containa</span><br>
+                    </a-heading>
+                    <a-paragraph>
+                        Google Analytics • Яндекс директ • Интернет маркетинг • Google adwords • Повышение конверсии • Разработка бизнес-стратегии • Стратегические коммуникации • Продуктовый маркетинговые
+                    </a-paragraph>
+                    <a-paragraph>
+                        Поиск и внешнее привлечение массово-премиального сегмента с помощью различных каналов. Выезды на территорию клиента. Выполнение плана продаж по банковским продуктам, финансовое консультирование клиентов...
+                    </a-paragraph>
+                    <div>
+                        <a-amount size="xl" amount="{ value: 80000, currency: { code: 'RUR', minority: 1 } }"></a-amount>
+                    </div>    
+                </a-plate>
+                <a-plate id="vacancy-post" is-flat="true" has-closer="false">
+                    <img width="100px" class='company_logo' src='./logos/second_company_logo.jpg' style="right: 10px;">
+                    <a-heading style='display: inline-block;' size='s'>
+                        <span size='s'>Senior Python Developer</span><br>
+                        <span size='l'>Удалённая работа</span><br>
+                        <span size='s'>Technicio</span><br>
+                    </a-heading>
+                    <a-paragraph>
+                        Python • Linux • MySQL • PostgreSQL • MongoDB • Высоконагруженные системы
+                    </a-paragraph>
+                    <a-paragraph>
+                        Technicio – это сервис, который позволяет быстро находить надежных исполнителей для решения любых задач. YouDo – это более 1,5 млн зарегистрированных пользователей, более 140 тысяч исполнителей, которые зарабатывают на сервисе, помогая заказчикам решать их проблемы...
+                    </a-paragraph>
+                    <div>
+                        <a-amount size="xl" amount="{ value: 100000, currency: { code: 'RUR', minority: 1 } }"></a-amount>
+                    </div>    
+                </a-plate>
+                <a-plate id="vacancy-post" is-flat="true" has-closer="false">
+                    <img width="100px" height="80px;" class='company_logo' src='./logos/third_company_logo.jpg' style="right: 10px;">
+                    <a-heading style='display: inline-block;' size='s'>
+                        <span size='s'>Front-end разработчик</span><br>
+                        <span size='l'>Единичный заказ</span><br>
+                        <span size='s'>Васичкин и Ко</span><br>
+                    </a-heading>
+                    <a-paragraph>
+                        HTML • CSS • JQuery • Адаптивная верстка • БЭМ • Gulp • Stylus • Git • Svg
+                    </a-paragraph>
+                    <a-paragraph>
+                        Нужно добавить подготовленные изменения в готовый сайт. Нужно в коде изменить данные на уже подготовленный материал, немного изменить дизайн на основе уже готового сайта и добавить пару страниц.
+                    </a-paragraph>
+                    <div>
+                        <a-amount size="xl" amount="{ value: 2000, currency: { code: 'RUR', minority: 1 } }"></a-amount>
+                    </div>    
+                </a-plate>
+            </a-app-content>
+            <a-footer slot="footer"></a-footer>
+        </a-page>
+    </body>
+</html>

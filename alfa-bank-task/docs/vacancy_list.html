@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Подходящие резюме</title>
+    <link rel="stylesheet" href="../blueprint/components.css" />
+    <script src="../blueprint/components.js"></script>
+    <style>
+        #photo {
+            position: absolute;
+            margin-right: 20px;
+        }
+        #user {
+            position: relative;
+            float: right;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a-page>
+        <a-header slot="header">
+                <a-user text="Клиент сервиса" id='user' slot="user"></a-user>
+                <a-menu
+                    view="horizontal"
+                    content="[
+                        {
+                            content: 'Найденные резюме (2)',
+                            value: 'screen1'
+                        },
+                        {
+                            content: 'Мои вакансии',
+                            value: 'screen2'
+                        }
+                    ]"
+                    slot="menu"
+                ></a-menu>
+            </a-header>
+        <a-app-title>
+            <a-heading size="l">Резюме подходящих вам сотрудников:</a-heading>
+        </a-app-title>
+        <a-app-content>
+            <a-plate id="vacancy-post" is-flat="true" has-closer="false">
+                <img width="80px" id='photo' src="image/cv_first_photo.jpg" style="right: 10px;" />
+                <a-heading style='display: inline-block;' size='s'>
+                    <span size='l'>Иванов Иван Иванович</span><br>
+                    <span size='l'>Вакансия: Старший разработчик C++</span><br>
+                    <span size='s'>89251234567</span><br>
+                </a-heading>
+                <div>
+                    <a-heading size='m'>
+                        <span size='m'>Ключевые навыки:<span /><br />
+                    </a-heading>
+                    <a-paragraph>
+                        Программирование • Верстка • CSS • C++ • C# • JavaScript • AngularJS • Ruby • RubyOnRails • Delphi • Pascal
+                    </a-paragraph>
+                </div>
+                <div>
+                    <a-button size="m" view="default">Показать подробнее</a-button>
+                    <a-button size="m" view="extra">Пригласить</a-button>
+                    <a-button size="m" view="extra">Отказать</a-button> <br />
+                </div>
+            </a-plate>
+            <a-plate id="vacancy-post" is-flat="true" has-closer="false">
+                <img width="80px" id='photo' src="image/cv_second_photo.jpg" style="right: 10px;" />
+                <a-heading style='display: inline-block;' size='s'>
+                    <span size='l'>Петров Петр Петрович</span><br>
+                    <span size='l'>Вакансия: Разработчик Python</span><br>
+                    <span size='s'>email@example.com</span><br>
+                </a-heading>
+                <div>
+                    <a-heading size='m'>
+                        <span size='m'>Ключевые навыки:<span /><br />
+                    </a-heading>
+                    <a-paragraph>
+                        Python • Программирование • Верстка • HTML • CSS • JavaScript • AngularJS • Redux • Canvas • ManyOthers
+                    </a-paragraph>
+                </div>
+                <div>
+                    <a-button size="m" view="default">Показать подробнее</a-button>
+                    <a-button size="m" view="extra">Пригласить</a-button>
+                    <a-button size="m" view="extra">Отказать</a-button> <br />
+                </div>
+            </a-plate>
+        </a-app-content>
+        <a-footer slot="footer"></a-footer>
+    </a-page>
+</body>
+</html>
