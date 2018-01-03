@@ -1,6 +1,6 @@
 # Site of Real Estate Agency
 
-Refactored markup of Agency site.
+Refactored frontend of Agency site. Final version is [here](https://beastrock.github.io/21_valid_markup/index.html).
 
 # Updates
 
@@ -12,7 +12,7 @@ Refactored markup of Agency site.
 + Remove a tag from li list
 + Change indent padding of contacts block
 + Remove doubled id
-+ Join two js scripts into one
++ Join two custom js scripts into one and put in file
 + Make links with // instead http(s)
 + Add px values to css
 + Rename img containing space in name
